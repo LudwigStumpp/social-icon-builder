@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+  <div class="container py-5" id="app">
+    <div class="row">
+      <div class="col-md-10 mx-auto">
+        <h1 class="mb-5">Social Icon Builder</h1>
+        <form>
+          <div class="form-group row">
+            <div class="col-sm-6">
+              <label for="inputIconClass">Icon Class:</label>
+              <input type="text" class="form-control" id="inputIconClass" placeholder="{{iconClass}}"
+                v-model="iconClass">
+            </div>
+            <div class="col-sm-6">
+              <label for="inputColorIcon">Icon Color:</label>
+              <input type="color" class="form-control" id="inputColorIcon" placeholder="{{iconColor}}"
+                v-model="iconColor">
+            </div>
+          </div>
+          <div class="form-group row">
+            <div class="col-sm-6">
+              <label for="inputBorderRadius">Border Radius:</label>
+              <input type="range" min=0 max=50 class="form-control" id="inputBorderRadius"
+                placeholder="{{borderRadius}}" v-model="borderRadius">
+            </div>
+            <div class="col-sm-6">
+              <label for="inputColorBackground">Background Color:</label>
+              <input type="color" class="form-control" id="inputColorBackground" placeholder="{{backgroundColor}}}"
+                v-model="backgroundColor">
+            </div>
+          </div>
+          <div class="form-group row">
+            <div class="col-sm-6">
+              <label for="inputPadding">Padding:</label>
+              <input type="range" min=0 max=75 class="form-control" id="inputPadding" placeholder="{{padding}}"
+                v-model="padding">
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <hr />
+
+    <div class="row mt-5">
+      <div class="col-md-10 mx-auto">
+        <form>
+          <div class="form-group row">
+            <div class="col-sm-6">
+              <a id='socialIcon' class="fa text-center" v-bind:class="[iconClass]"
+                style="box-sizing: content-box; border: 1px white solid; position: fixed;"
+                v-bind:style="{ color: iconColor, width: fontSize-(2*padding) + 'px', fontSize: fontSize-(2*padding) + 'px', background: backgroundColor, borderRadius: borderRadius + '%', padding: padding + 'px'}"></a>
+            </div>
+            <div class="col-sm-6">
+              <button v-on:click="printToCanvas" type="button" class="btn btn-primary px-4 float-left">Save</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="html2canvas.min.js"></script>
+  <script src="index.js"></script>
+</body>
+
+</html>
