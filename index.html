@@ -14,8 +14,11 @@
   <div class="container py-5" id="app">
     <div class="row">
       <div class="col-md-10 mx-auto">
-        <h1 class="mb-5">Social Icon Builder</h1>
-        <form>
+        <h1>Social Icon Builder</h1>
+        <p>See <a href="https://fontawesome.com/v4.7.0/cheatsheet/"
+            target="_blank">https://fontawesome.com/v4.7.0/cheatsheet/</a> for a
+          full list of icons.</p>
+        <form class="mt-5">
           <div class="form-group row">
             <div class="col-sm-6">
               <label for="inputIconClass">Icon Class:</label>
@@ -58,7 +61,7 @@
         <form>
           <div class="form-group row">
             <div class="col-sm-6">
-              <a id='socialIcon' class="fa text-center" v-bind:class="['fa-' + iconClass]"
+              <a id='socialIcon' class="fa text-center" v-bind:class="[iconClass]"
                 style="box-sizing: content-box; border: 1px white solid; position: fixed;"
                 v-bind:style="{ color: iconColor, width: fontSize-(2*padding) + 'px', fontSize: fontSize-(2*padding) + 'px', background: backgroundColor, borderRadius: borderRadius + '%', padding: padding + 'px'}"></a>
             </div>
