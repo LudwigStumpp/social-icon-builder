@@ -18,8 +18,8 @@ const app = new Vue({
         backgroundColor: "rgba(0,0,0,0)",
       }).then(canvas => {
         const image = canvas.toDataURL("image/png");
-        let w = window.open('about:blank', 'image from canvas');
-        w.location.href = image;
+        let w = window.open('about:blank', 'Social Icon Image');
+        w.document.write("<img src='" + image + "' alt='from canvas'/>");
       });
 
       document.body.style.overflowY = 'auto';
