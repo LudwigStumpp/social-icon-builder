@@ -4,9 +4,17 @@ const app = new Vue({
     iconClass: 'fa-github',
     iconColor: '#000000',
     backgroundColor: '#f59342',
-    fontSize: 150,
+    size: 200,
     borderRadius: 50,
-    padding: 20,
+    padding: 0
+  },
+  computed: {
+    width: function () {
+      return this.size - (this.padding / 100 * this.size);
+    },
+    fontSize: function () {
+      return this.width;
+    },
   },
   methods: {
     printToCanvas: function (event) {

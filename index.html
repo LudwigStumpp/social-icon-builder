@@ -45,9 +45,14 @@
           </div>
           <div class="form-group row">
             <div class="col-sm-6">
-              <label for="inputPadding">Padding: {{Math.round(padding * 100 / 75)}} %</label>
-              <input type="range" min=0 max=75 class="form-control" id="inputPadding" placeholder="{{padding}}"
+              <label for="inputPadding">Padding: {{padding}} %</label>
+              <input type="range" min=0 max=100 class="form-control" id="inputPadding" placeholder="{{padding}}"
                 v-model="padding">
+            </div>
+            <div class="col-sm-6">
+              <label for="inputSize">Size: {{size}} px</label>
+              <input type="range" min=50 max=400 class="form-control" id="inputSize" placeholder="{{size}}"
+                v-model="size">
             </div>
           </div>
         </form>
@@ -62,7 +67,7 @@
           <div class="form-group row">
             <div class="col-sm-6">
               <a id='socialIcon' class="fa text-center" v-bind:class="[iconClass]" style="box-sizing: content-box;"
-                v-bind:style="{ color: iconColor, width: fontSize-(2*padding) + 'px', fontSize: fontSize-(2*padding) + 'px', background: backgroundColor, borderRadius: borderRadius + '%', padding: padding + 'px'}"></a>
+                v-bind:style="{ color: iconColor, width: width + 'px', fontSize: fontSize + 'px', background: backgroundColor, borderRadius: borderRadius + '%', padding: padding*0.5*size/100 + 'px'}"></a>
             </div>
             <div class="col-sm-6">
               <button v-on:click="printToCanvas" type="button" class="btn btn-primary px-4 float-left">Convert to
