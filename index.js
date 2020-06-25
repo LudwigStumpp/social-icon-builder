@@ -10,11 +10,18 @@ const app = new Vue({
   },
   methods: {
     printToCanvas: function (event) {
-      html2canvas(document.querySelector("#socialIcon")).then(canvas => {
+      document.body.style.overflowY = 'hidden';
+
+      element = document.querySelector("#socialIcon");
+      html2canvas(element, {
+        scrollY: -window.scrollY,
+      }).then(canvas => {
         const image = canvas.toDataURL("image/png");
         let w = window.open('about:blank', 'image from canvas');
         w.location.href = image;
       });
+
+      document.body.style.overflowY = 'auto';
     }
   }
 })
