@@ -26,26 +26,26 @@
                 v-model="iconClass">
             </div>
             <div class="col-sm-6">
-              <label for="inputColorIcon">Icon Color:</label>
+              <label for="inputColorIcon">Icon Color: {{iconColor}}</label>
               <input type="color" class="form-control" id="inputColorIcon" placeholder="{{iconColor}}"
                 v-model="iconColor">
             </div>
           </div>
           <div class="form-group row">
             <div class="col-sm-6">
-              <label for="inputBorderRadius">Border Radius:</label>
+              <label for="inputBorderRadius">Border Radius: {{borderRadius}} %</label>
               <input type="range" min=0 max=50 class="form-control" id="inputBorderRadius"
                 placeholder="{{borderRadius}}" v-model="borderRadius">
             </div>
             <div class="col-sm-6">
-              <label for="inputColorBackground">Background Color:</label>
+              <label for="inputColorBackground">Background Color: {{backgroundColor}}</label>
               <input type="color" class="form-control" id="inputColorBackground" placeholder="{{backgroundColor}}}"
                 v-model="backgroundColor">
             </div>
           </div>
           <div class="form-group row">
             <div class="col-sm-6">
-              <label for="inputPadding">Padding:</label>
+              <label for="inputPadding">Padding: {{padding}} px</label>
               <input type="range" min=0 max=75 class="form-control" id="inputPadding" placeholder="{{padding}}"
                 v-model="padding">
             </div>
