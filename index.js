@@ -15,6 +15,7 @@ const app = new Vue({
       element = document.querySelector("#socialIcon");
       html2canvas(element, {
         scrollY: -window.scrollY,
+        backgroundColor: "rgba(0,0,0,0)",
       }).then(canvas => {
         const image = canvas.toDataURL("image/png");
         let w = window.open('about:blank', 'image from canvas');
