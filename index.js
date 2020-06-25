@@ -1,7 +1,7 @@
 const app = new Vue({
   el: '#app',
   data: {
-    iconClass: 'fa-github',
+    iconClass: 'github',
     iconColor: '#000000',
     backgroundColor: '#f59342',
     fontSize: 150,
