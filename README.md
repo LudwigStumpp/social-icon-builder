@@ -6,7 +6,7 @@ A web-based tool to help you create your social media icons.
 
 ## Usage
 
-Visit ["https://social-icon-builder.herokuapp.com/"]("https://social-icon-builder.herokuapp.com/").
+Visit ["https://social-icon-builder.herokuapp.com"](https://social-icon-builder.herokuapp.com).
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
