@@ -65,11 +65,11 @@
       <div class="col-md-10 mx-auto">
         <form>
           <div class="form-group row">
-            <div class="col-sm-6">
+            <div class="col-sm-6 mb-5">
               <a id='socialIcon' class="fa text-center" v-bind:class="[iconClass]" style="box-sizing: content-box;"
                 v-bind:style="{ color: iconColor, width: width + 'px', fontSize: fontSize + 'px', background: backgroundColor, borderRadius: borderRadius + '%', padding: padding*0.5*size/100 + 'px'}"></a>
             </div>
-            <div class="col-sm-6">
+            <div class="col-sm-6 mb-5">
               <button v-on:click="printToCanvas" type="button" class="btn btn-primary px-4 float-left">Convert to
                 .png</button>
             </div>
@@ -79,7 +79,7 @@
     </div>
   </div>
 
-  <div class="navbar fixed-bottom mt-5 bg-dark">
+  <div class="navbar fixed-bottom bg-dark">
     <div class="text-white">Made with <span class="fa fa-heart text-danger"></span> in
       Bavaria.
     </div>
